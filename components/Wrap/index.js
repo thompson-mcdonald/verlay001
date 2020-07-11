@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import { Large } from '../Breakpoints';
-import { border, margin, padding, flexbox, width } from 'styled-system'
+import styled from "styled-components";
+import { Large } from "../Breakpoints";
+import { border, margin, padding, flexbox, width } from "styled-system";
 
 export const Wrap = styled.div`
   width: 90%;
@@ -13,10 +13,9 @@ export const Wrap = styled.div`
   ${width}
   ${border}
   ${padding}
-  ${margin}`
-  ;
+  ${margin}`;
 
-  export const WrapFlex = styled.div`
+export const WrapFlex = styled.div`
     display: flex;
     width: 90%;
     margin: 0 auto;
@@ -27,11 +26,10 @@ export const Wrap = styled.div`
     ${border}
     ${padding}
     ${margin}
-    ${flexbox}`
-  ;
+    ${flexbox}`;
 
-  export const Flex = styled.div`
-    display: flex;
-    ${flexbox}
-    ${padding}
-  `;
+export const Flex = styled.div`
+  display: flex;
+  ${flexbox}
+  ${padding}
+`;

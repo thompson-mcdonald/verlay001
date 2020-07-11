@@ -4,25 +4,20 @@ module.exports = {
     node: true,
     es2020: true,
   },
-  parser: "@typescript-eslint/parser",
+  parser: "@typescript-eslint/parser", // Specifies ESLint parser
   parserOptions: {
-    ecmaVersion: 2020,
-    sourceType: "module",
+    ecmaVersion: 2020, // Allows for use parseing of modern EMCA
+    sourceType: "module", // Allows the use of imports
     ecmaFeatures: {
-      jsx: true,
+      jsx: true, // Allow for pasrsing of jsx
     },
   },
   plugins: ["@typescript-eslint", "react", "prettier"],
   extends: [
-    "airbnb",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:react/recommended",
-    "plugin:import/errors",
-    "plugin:import/warnings",
-    "plugin:import/typescript",
-    "prettier",
-    "prettier/@typescript-eslint",
-    "prettier/react",
+    "plugin:react/recommended", // Uses the recommended rules from @eslint-plugin-react
+    "plugin:@typescript-eslint/recommended", // Uses the recommended rules from the @typescript-eslint/eslint-plugin
+    "prettier/@typescript-eslint", // Uses eslint-config-prettier to disable ESLint rules from @typescript-eslint/eslint-plugin that would conflict with prettier
+    "plugin:prettier/recommended", // Enables eslint-plugin-prettier and eslint-config-prettier. This will display prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
   ],
   rules: {
     "react/react-in-jsx-scope": "off",
@@ -36,6 +31,9 @@ module.exports = {
     "prettier/prettier": "error",
   },
   settings: {
+    react: {
+      version: "detect",
+    },
     "import/resolver": {
       node: {
         paths: ["~"],
