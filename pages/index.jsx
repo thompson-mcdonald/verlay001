@@ -22,12 +22,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <link href="https://fonts.googleapis.com/css2?family=Lateef&display=swap" rel="stylesheet" />
       </Head>
+      <div>
+        
+      </div>
       <Hero title="Title" subtitle="subtitle" />
       <main>
         <Pollen> faffaa</Pollen>
         <Box color={["red" , "green"]} bg={OffWhite}>Yes</Box>
       </main>
-
     </div>
   )
 }
