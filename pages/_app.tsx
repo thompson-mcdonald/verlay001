@@ -8,7 +8,7 @@ import theme from "../theme";
 import GlobalStyles from "../GlobalStyles";
 
 export default class MyApp extends App {
-  render() {
+  render(): JSX.Element {
     const { Component, pageProps, router } = this.props;
     return (
       <div>

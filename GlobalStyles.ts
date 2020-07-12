@@ -1,7 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
-
   :root {
     ${"" /* it appears this was making the base font-size 16px before */}
     font-size: 10px;
@@ -48,6 +47,7 @@ const GlobalStyles = createGlobalStyle`
     text-rendering: optimizeLegibility;
   }
 
+  /* Do we need this?? */
   input, button {
     &:focus {
       outline: none;
@@ -63,8 +63,6 @@ const GlobalStyles = createGlobalStyle`
     cursor: pointer;
     outline: inherit;
   }
-
-
 `;
 
 export default GlobalStyles;
