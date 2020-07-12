@@ -1,6 +1,6 @@
 import { Title } from "./styled";
 
-const Hero = ({ title, subtitle }) => {
+const Hero = ({ title, subtitle }): JSX.Element => {
   return (
     <>
       <Title>{title}</Title>
