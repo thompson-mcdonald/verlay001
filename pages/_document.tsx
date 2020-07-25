@@ -1,5 +1,5 @@
 import { ServerStyleSheet } from "styled-components";
-import Document, { Main, NextScript } from "next/document";
+import Document, { Main, NextScript, Html, Head } from "next/document";
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -30,12 +30,20 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <html lang="en">
+      <Html lang="en">
+        <Head>
+          <title>Verlay</title>
+          <link rel="icon" href="/favicon.ico" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Lateef&display=swap"
+            rel="stylesheet"
+          />
+        </Head>
         <body>
           <Main />
           <NextScript />
         </body>
-      </html>
+      </Html>
     );
   }
 }
