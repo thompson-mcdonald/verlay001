@@ -2,8 +2,13 @@ import React, {useState} from "react";
 import { BurgerComp } from './styled'
 import { HamburgerCollapseReverse } from 'react-animated-burgers'
 
-function Burger(props) {
-    const { state, dispatch_openMobileMenu, dispatch_closeMobileMenu } = props
+interface Props {
+    state: any;
+    dispatch_openMobileMenu: any;
+    dispatch_closeMobileMenu: any;
+};
+
+const Burger: React.FC<Props> = ({ state, dispatch_openMobileMenu, dispatch_closeMobileMenu }) => {
     const { store } = state
     const [isOpen, setIsOpen] = useState(store.open)
     const handleOpen = () => {

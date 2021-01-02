@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 import rootReducer from './rootReducer'
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage"; // defaults to localStorage for web
@@ -8,6 +9,13 @@ const persistConfig = {
     storage,
     debug: false
   };
+
+  declare global {
+    interface Window {
+      __REDUX_DEVTOOLS_EXTENSION_COMPOSE__?: any;
+      __REDUX_DEVTOOLS_EXTENSION__?: any;
+    }
+}
   
   const persistedReducer = persistReducer(persistConfig, rootReducer);
 
@@ -21,7 +29,3 @@ const persistConfig = {
       store.replaceReducer(newRootReducer);
     });
   }
-
-
-
-

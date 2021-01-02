@@ -9,6 +9,8 @@
     "lint": "eslint --fix ./ --ext .js,.jsx,.ts,.tsx --cache"
   },
   "dependencies": {
+    "@types/react-redux": "^7.1.15",
+    "@types/webpack-env": "^1.16.0",
     "next": "9.4.4",
     "react": "16.13.1",
     "react-animated-burgers": "^1.2.8",

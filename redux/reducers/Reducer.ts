@@ -1,4 +1,4 @@
-import { OPEN_MOBILE_MENU, CLOSE_MOBILE_MENU, OPEN_MODAL, CLOSE_MODAL, CLOSE_MOBILE_MENU_OPEN_MODAL } from '../actions/ActionConstants';
+import { OPEN_MOBILE_MENU, CLOSE_MOBILE_MENU, OPEN_MODAL, CLOSE_MODAL } from '../actions/ActionConstants';
 
 const reducerSwitch = (state = { open: false, modalVisible: false }, action) => {
     switch (action.type) {

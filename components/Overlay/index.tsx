@@ -14,8 +14,13 @@ const OverlayComp = styled.div`
   transition: all 1s;
 `
 
-function Overlay(props) {
-    const { state, dispatch_openMobileMenu, dispatch_closeMobileMenu } = props
+  interface Props {
+    state: any;
+    dispatch_openMobileMenu: any;
+    dispatch_closeMobileMenu: any;
+  };
+  
+  const Overlay: React.FC<Props> = ({ state, dispatch_openMobileMenu, dispatch_closeMobileMenu }) => {
     const { store } = state
     return (
       <OverlayComp className='menu-overlay' show={store.open} onClick={store.open ? dispatch_closeMobileMenu : dispatch_openMobileMenu} />
